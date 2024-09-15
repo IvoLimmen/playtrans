@@ -19,6 +19,7 @@ public class Playtrans {
 
     var choice = console.showSources(list);
     var date = console.selectDate();
+    
     var playlist = from.getPlaylist(choice, date);
     
     if (playlist != null && !playlist.songs().isEmpty()) {

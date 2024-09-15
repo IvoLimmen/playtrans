@@ -19,7 +19,7 @@ import org.limmen.playtrans.api.Source;
 
 public class Relisten extends AbstractPlaylistRetriever implements PlaylistSource {
 
-  private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+  private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
   @Override
   public List<String> getSources() {
@@ -61,7 +61,7 @@ public class Relisten extends AbstractPlaylistRetriever implements PlaylistSourc
         i++;
       }
 
-      return new Playlist(songs, LocalDate.now(), s.getLabel());
+      return new Playlist(songs, date, s.getLabel());
     } catch (Exception e) {
       e.printStackTrace();
       return null;
